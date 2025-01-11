@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backk"
+    android:padding="16dp">
+
+    <!-- Home Button with icon -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Home"
+        android:textColor="#FFFFFF"
+        app:icon="@drawable/ic_home"
+        app:iconTint="#FFFFFF"
+        app:backgroundTint="#7F00FF"
+        app:cornerRadius="24dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Header Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/homeButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#7F00FF">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/bisu_logo" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="BISU Parking Space"
+                android:textColor="#FFEB3B"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/instruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="*𝘴𝘦𝘭𝘦𝘤𝘵 𝘢𝘯𝘥 𝘤𝘭𝘪𝘤𝘬 𝘰𝘯 𝘵𝘩𝘦 𝘴𝘱𝘰𝘵 𝘵𝘰 𝘱𝘢𝘳𝘬.."
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                 />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Parking Legend -->
+    <LinearLayout
+        android:id="@+id/legendLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/headerCard">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/circle_green"
+            android:drawablePadding="4dp"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Occupied"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/circle_red"
+            android:drawablePadding="4dp" />
+    </LinearLayout>
+
+    <!-- Parking Grid Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parkingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/legendLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:background="#7F00FF">
+
+            <ScrollView
+                android:id="@+id/leftScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:fadeScrollbars="false"
+                android:scrollbars="none"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Left Column -->
+            <LinearLayout
+                android:id="@+id/leftColumn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:spacing="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button5"
+                    style="@style/ParkingSpotButton"
+                    android:text="L1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button6"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="L2" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button8"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="L3" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button10"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="L4" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button12"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="L5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button14"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="L6" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button16"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="L7" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button18"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="L8" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button19"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="L9" />
+            </LinearLayout>
+            </ScrollView>
+
+            <!-- Right Column -->
+            <ScrollView
+                android:id="@+id/rightScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:fadeScrollbars="false"
+                android:scrollbars="none"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guidelineRight">
+
+            <LinearLayout
+                android:id="@+id/rightColumn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:spacing="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button4"
+                    style="@style/ParkingSpotButton"
+                    android:text="R1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button7"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="R2" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button9"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="R3" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button11"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="R4" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button13"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="R5" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button15"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="R6" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button17"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="R7" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button20"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="R8" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button21"
+                    style="@style/ParkingSpotButton"
+                    android:layout_marginTop="8dp"
+                    android:text="R9" />
+            </LinearLayout>
+            </ScrollView>
+
+            <!-- Guideline for entrance/exit area -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <!-- Entrance Section -->
+            <TextView
+                android:id="@+id/entranceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENTRANCE"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:rotation="-90"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="50dp"/>
+
+            <!-- Exit Section -->
+
+            <ImageView
+                android:id="@+id/entranceArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="36dp"
+                android:rotation="180"
+                app:layout_constraintEnd_toEndOf="@id/entranceLabel"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toStartOf="@id/entranceLabel"
+                app:layout_constraintTop_toBottomOf="@id/entranceLabel"
+                app:srcCompat="@drawable/ic_arrow"
+                app:tint="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/exitLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="68dp"
+                android:layout_marginBottom="48dp"
+                android:rotation="-90"
+                android:text="EXIT"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/exitArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="8dp"
+                android:rotation="0"
+                app:layout_constraintBottom_toTopOf="@id/exitLabel"
+                app:layout_constraintEnd_toEndOf="@id/exitLabel"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/exitLabel"
+                app:layout_constraintTop_toBottomOf="@+id/entranceArrow"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_arrow"
+                app:tint="#FFFFFF" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backk"
+    android:padding="16dp">
+
+    <!-- Header Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:background="@drawable/backk"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/bisu_logo" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="SELECT YOUR VEHICLE TYPE"
+                android:textAlignment="center"
+                android:textColor="#FFEB3B"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Vehicle Selection Cards -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/motorcycleCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/headerCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/backk"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/motorcycle_icon" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/motorcycleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motorcycle"
+                android:layout_marginTop="8dp"
+                app:cornerRadius="8dp"
+                android:paddingHorizontal="32dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/motorcycleCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/backk"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/car_icon" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/carButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4-Wheeled Car"
+                android:layout_marginTop="8dp"
+                app:cornerRadius="8dp"
+                android:paddingHorizontal="32dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Info Text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please select your vehicle type to continue"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/carCard" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

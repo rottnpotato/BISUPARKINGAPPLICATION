@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "354246168816",
+    "project_id": "project-2024-d0bb0",
+    "storage_bucket": "project-2024-d0bb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354246168816:android:2d40c2241a22bafc4c3235",
+        "android_client_info": {
+          "package_name": "com.example.amoveraapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC35ZaIIYP3irFRq8gmQI0vg1LWGa7s7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

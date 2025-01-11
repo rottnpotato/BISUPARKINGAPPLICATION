@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252634049547",
+    "project_id": "bisu-parking-spot",
+    "storage_bucket": "bisu-parking-spot.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252634049547:android:a52aae8165f76e3a37ab0e",
+        "android_client_info": {
+          "package_name": "com.example.bisuparkingapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8ixPbLGX2-rOYRRLhJUqWWYmQNQmfRKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ParkingSpotButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:backgroundTint">#808080</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">0dp</item>
+    </style>
+</resources>
